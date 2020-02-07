@@ -71,6 +71,12 @@ class ViewErrorViewController: UIViewController {
         presenter.handle(.doLoad)
     }
     
+    private func presentRetryElements() {
+        self.activityIndicator.isHidden = true
+        self.errorInfoLabel.isHidden = false
+        self.tryAgainButton.isHidden = false
+    }
+    
 }
 
 // MARK: - Display Logic -
@@ -78,8 +84,6 @@ class ViewErrorViewController: UIViewController {
 // PRESENTER -> VIEW
 extension ViewErrorViewController: ViewErrorPresenterOutput {
     func display(_ displayModel: ViewError.DisplayData.Error) {
-        self.activityIndicator.isHidden = true
-        self.errorInfoLabel.isHidden = false
-        self.tryAgainButton.isHidden = false
+        presentRetryElements()
     }
 }
