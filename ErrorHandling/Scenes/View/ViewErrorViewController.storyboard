@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Error View Controller-->
+        <scene sceneID="i0m-iF-p80">
+            <objects>
+                <viewController storyboardIdentifier="ViewErrorViewController" id="F2H-rH-Lsj" customClass="ViewErrorViewController" customModule="ErrorHandling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ev-QE-M02">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvK-Qu-28h">
+                                <rect key="frame" x="164.5" y="580" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tryAginButtonTapped:" destination="F2H-rH-Lsj" eventType="touchUpInside" id="0Hy-R4-Uob"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="wNZ-cw-InU">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kt4-Cc-giz">
+                                <rect key="frame" x="166.5" y="323.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fhz-5B-qaF" firstAttribute="bottom" secondItem="AvK-Qu-28h" secondAttribute="bottom" constant="57" id="1cK-nY-4kb"/>
+                            <constraint firstItem="Kt4-Cc-giz" firstAttribute="centerX" secondItem="2ev-QE-M02" secondAttribute="centerX" id="9Ej-SQ-wi2"/>
+                            <constraint firstItem="AvK-Qu-28h" firstAttribute="centerX" secondItem="Fhz-5B-qaF" secondAttribute="centerX" id="EoT-Di-vb9"/>
+                            <constraint firstItem="wNZ-cw-InU" firstAttribute="centerX" secondItem="2ev-QE-M02" secondAttribute="centerX" id="bdE-G5-NoV"/>
+                            <constraint firstItem="Kt4-Cc-giz" firstAttribute="centerY" secondItem="2ev-QE-M02" secondAttribute="centerY" id="cnS-MA-oZK"/>
+                            <constraint firstItem="wNZ-cw-InU" firstAttribute="centerY" secondItem="2ev-QE-M02" secondAttribute="centerY" id="dkF-Pr-aHd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fhz-5B-qaF"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="wNZ-cw-InU" id="bZG-uZ-gNt"/>
+                        <outlet property="errorInfoLabel" destination="Kt4-Cc-giz" id="VU1-EA-byq"/>
+                        <outlet property="tryAgainButton" destination="AvK-Qu-28h" id="kp2-56-V0V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyU-Lz-LgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="147"/>
+        </scene>
+    </scenes>
+</document>

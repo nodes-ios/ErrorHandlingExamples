@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-protocol ErrorDisplayer {
-    
-}
-
-extension ErrorDisplayer where self == UIViewController {
-    
-}
+//protocol ErrorDisplayer {
+//
+//}
+//
+//extension ErrorDisplayer where self == UIViewController {
+//
+//}

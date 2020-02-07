@@ -29,6 +29,13 @@
 		8331E811227C319500F13CBB /* LoginErrorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331E80A227C319500F13CBB /* LoginErrorProtocols.swift */; };
 		8331E812227C319500F13CBB /* LoginErrorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331E80B227C319500F13CBB /* LoginErrorInteractor.swift */; };
 		8331E814227C5A5C00F13CBB /* UIViewController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331E813227C5A5C00F13CBB /* UIViewController+Error.swift */; };
+		A83EDBF023EDA25600EF6CE1 /* ViewErrorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EDBE923EDA25600EF6CE1 /* ViewErrorCoordinator.swift */; };
+		A83EDBF123EDA25600EF6CE1 /* ViewErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EDBEA23EDA25600EF6CE1 /* ViewErrorPresenter.swift */; };
+		A83EDBF223EDA25600EF6CE1 /* ViewErrorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83EDBEB23EDA25600EF6CE1 /* ViewErrorViewController.storyboard */; };
+		A83EDBF323EDA25600EF6CE1 /* ViewErrorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EDBEC23EDA25600EF6CE1 /* ViewErrorModels.swift */; };
+		A83EDBF423EDA25600EF6CE1 /* ViewErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EDBED23EDA25600EF6CE1 /* ViewErrorViewController.swift */; };
+		A83EDBF523EDA25600EF6CE1 /* ViewErrorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EDBEE23EDA25600EF6CE1 /* ViewErrorProtocols.swift */; };
+		A83EDBF623EDA25700EF6CE1 /* ViewErrorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EDBEF23EDA25600EF6CE1 /* ViewErrorInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +84,13 @@
 		8331E80A227C319500F13CBB /* LoginErrorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrorProtocols.swift; sourceTree = "<group>"; };
 		8331E80B227C319500F13CBB /* LoginErrorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrorInteractor.swift; sourceTree = "<group>"; };
 		8331E813227C5A5C00F13CBB /* UIViewController+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Error.swift"; sourceTree = "<group>"; };
+		A83EDBE923EDA25600EF6CE1 /* ViewErrorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErrorCoordinator.swift; sourceTree = "<group>"; };
+		A83EDBEA23EDA25600EF6CE1 /* ViewErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErrorPresenter.swift; sourceTree = "<group>"; };
+		A83EDBEB23EDA25600EF6CE1 /* ViewErrorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewErrorViewController.storyboard; sourceTree = "<group>"; };
+		A83EDBEC23EDA25600EF6CE1 /* ViewErrorModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErrorModels.swift; sourceTree = "<group>"; };
+		A83EDBED23EDA25600EF6CE1 /* ViewErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErrorViewController.swift; sourceTree = "<group>"; };
+		A83EDBEE23EDA25600EF6CE1 /* ViewErrorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErrorProtocols.swift; sourceTree = "<group>"; };
+		A83EDBEF23EDA25600EF6CE1 /* ViewErrorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErrorInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +172,7 @@
 		8308FF19227B2BC1005C8168 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A83EDBDA23EDA00C00EF6CE1 /* View */,
 				8331E804227C317B00F13CBB /* Login */,
 				8331E803227C317300F13CBB /* List */,
 			);
@@ -200,6 +215,20 @@
 				8331E80B227C319500F13CBB /* LoginErrorInteractor.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		A83EDBDA23EDA00C00EF6CE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A83EDBE923EDA25600EF6CE1 /* ViewErrorCoordinator.swift */,
+				A83EDBEA23EDA25600EF6CE1 /* ViewErrorPresenter.swift */,
+				A83EDBEB23EDA25600EF6CE1 /* ViewErrorViewController.storyboard */,
+				A83EDBEC23EDA25600EF6CE1 /* ViewErrorModels.swift */,
+				A83EDBED23EDA25600EF6CE1 /* ViewErrorViewController.swift */,
+				A83EDBEE23EDA25600EF6CE1 /* ViewErrorProtocols.swift */,
+				A83EDBEF23EDA25600EF6CE1 /* ViewErrorInteractor.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +337,7 @@
 			files = (
 				8331E80E227C319500F13CBB /* LoginErrorViewController.storyboard in Resources */,
 				8308FEF6227B2ABB005C8168 /* LaunchScreen.storyboard in Resources */,
+				A83EDBF223EDA25600EF6CE1 /* ViewErrorViewController.storyboard in Resources */,
 				8308FEF3227B2ABB005C8168 /* Assets.xcassets in Resources */,
 				8308FF23227B2C2B005C8168 /* ErrorListViewController.storyboard in Resources */,
 			);
@@ -336,17 +366,23 @@
 			files = (
 				8308FF25227B2C2B005C8168 /* ErrorListViewController.swift in Sources */,
 				8308FF26227B2C2B005C8168 /* ErrorListProtocols.swift in Sources */,
+				A83EDBF523EDA25600EF6CE1 /* ViewErrorProtocols.swift in Sources */,
+				A83EDBF123EDA25600EF6CE1 /* ViewErrorPresenter.swift in Sources */,
 				8308FF22227B2C2B005C8168 /* ErrorListPresenter.swift in Sources */,
 				8308FF24227B2C2B005C8168 /* ErrorListModels.swift in Sources */,
+				A83EDBF323EDA25600EF6CE1 /* ViewErrorModels.swift in Sources */,
 				8331E80F227C319500F13CBB /* LoginErrorModels.swift in Sources */,
 				8308FF2A227B2C4A005C8168 /* AppCoordinator.swift in Sources */,
 				8331E811227C319500F13CBB /* LoginErrorProtocols.swift in Sources */,
 				8331E80C227C319500F13CBB /* LoginErrorCoordinator.swift in Sources */,
 				8308FF27227B2C2B005C8168 /* ErrorListInteractor.swift in Sources */,
+				A83EDBF623EDA25700EF6CE1 /* ViewErrorInteractor.swift in Sources */,
 				8331E814227C5A5C00F13CBB /* UIViewController+Error.swift in Sources */,
 				8308FEEC227B2AB9005C8168 /* AppDelegate.swift in Sources */,
 				8331E812227C319500F13CBB /* LoginErrorInteractor.swift in Sources */,
 				8308FF21227B2C2B005C8168 /* ErrorListCoordinator.swift in Sources */,
+				A83EDBF023EDA25600EF6CE1 /* ViewErrorCoordinator.swift in Sources */,
+				A83EDBF423EDA25600EF6CE1 /* ViewErrorViewController.swift in Sources */,
 				8331E80D227C319500F13CBB /* LoginErrorPresenter.swift in Sources */,
 				8331E810227C319500F13CBB /* LoginErrorViewController.swift in Sources */,
 				8308FF2C227B2C50005C8168 /* Coordinator.swift in Sources */,

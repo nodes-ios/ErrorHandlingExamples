@@ -40,8 +40,14 @@ class AppCoordinator: Coordinator {
         children.append(loginCoordinator)
         loginCoordinator.start()
         
+        let viewNavController = UINavigationController()
+        viewNavController.tabBarItem = UITabBarItem(title: "View", image: nil, selectedImage: nil)
+        let viewCoordinator = ViewErrorCoordinator(navigationController: viewNavController)
+        children.append(viewCoordinator)
+        viewCoordinator.start()
+        
        
-        tabBarController.viewControllers = [listNavController, loginNavController]
+        tabBarController.viewControllers = [listNavController, loginNavController, viewNavController]
         window.rootViewController = tabBarController
         
     }
