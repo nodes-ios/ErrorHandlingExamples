@@ -24,12 +24,12 @@ protocol LoginErrorCoordinatorInput: class {
 
 // PRESENTER -> INTERACTOR
 protocol LoginErrorInteractorInput {
-    // func perform(_ request: LoginError.Request.Work)
+     func perform(_ request: LoginError.Request.Login)
 }
 
 // INTERACTOR -> PRESENTER (indirect)
 protocol LoginErrorInteractorOutput: class {
-    // func present(_ response: LoginError.Response.Work)
+     func present(_ response: LoginError.Response.Login)
 }
 
 // ======== Presenter ======== //
@@ -43,4 +43,5 @@ protocol LoginErrorPresenterInput {
 // PRESENTER -> VIEW
 protocol LoginErrorPresenterOutput: class {
     func display(_ displayModel: LoginError.DisplayData.ValidationError)
+    func display(_ displayModel: LoginError.DisplayData.LoginError)
 }

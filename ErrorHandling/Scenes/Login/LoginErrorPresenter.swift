@@ -30,6 +30,8 @@ extension LoginErrorPresenter: LoginErrorPresenterInput {
 
     func handle(_ action: LoginError.Action) {
         switch action {
+        case .login:
+            interactor.perform(LoginError.Request.Login())
         case .createUser:
             submit()
         case .invalidEmail:
@@ -50,5 +52,7 @@ extension LoginErrorPresenter: LoginErrorPresenterInput {
 
 // INTERACTOR -> PRESENTER (indirect)
 extension LoginErrorPresenter: LoginErrorInteractorOutput {
-
+    func present(_ response: LoginError.Response.Login) {
+        output?.display(LoginError.DisplayData.LoginError(message: "Wrong email or password"))
+    }
 }

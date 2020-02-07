@@ -14,7 +14,7 @@ enum LoginError {
     enum DisplayData { }
 
     enum Action {
-        case createUser, invalidEmail, invalidPassword
+        case createUser, invalidEmail, invalidPassword, login
     }
 
     enum Route {
@@ -23,16 +23,19 @@ enum LoginError {
 }
 
 extension LoginError.Request {
-
+    struct Login {}
 }
 
 extension LoginError.Response {
-
+    struct Login {}
 }
 
 extension LoginError.DisplayData {
     struct ValidationError {
         let emailError: String?
         let passwordError: String?
+    }
+    struct LoginError {
+        let message: String
     }
 }

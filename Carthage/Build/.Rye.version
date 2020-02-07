@@ -1,0 +1,10 @@
+{
+  "commitish" : "1.1.11",
+  "iOS" : [
+    {
+      "name" : "Rye",
+      "hash" : "9d4a15106366744e95bfdc62111114466da3473ebc31f7f9683ab917187697c5",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    }
+  ]
+}

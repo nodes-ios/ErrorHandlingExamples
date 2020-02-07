@@ -22,4 +22,7 @@ class LoginErrorInteractor {
 
 // PRESENTER -> INTERACTOR
 extension LoginErrorInteractor: LoginErrorInteractorInput {
+    func perform(_ request: LoginError.Request.Login) {
+        output?.present(LoginError.Response.Login())
+    }
 }

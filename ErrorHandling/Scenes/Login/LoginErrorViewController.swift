@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Rye
 
 class LoginErrorViewController: UIViewController {
     // MARK: - Outlets
@@ -54,6 +55,10 @@ class LoginErrorViewController: UIViewController {
         
     }
     
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        presenter.handle(.login)
+    }
+    
     private func highlight(_ field: UITextField, label: UILabel, text: String) {
         field.layer.borderColor = UIColor.red.cgColor
         field.layer.borderWidth = 1
@@ -71,12 +76,25 @@ class LoginErrorViewController: UIViewController {
             $0!.layer.borderWidth = 0
         }
     }
+    
+    private func displayToast(with message: String) {
+        let ryeConfiguration: RyeConfiguration = [Rye.Configuration.Key.text: message]
+        let rye = RyeViewController.init(alertType: .toast,
+                                        viewType: .standard(configuration: ryeConfiguration),
+                                        at: .top(inset: 16),
+                                        timeAlive: 2)
+        rye.show()
+    }
 }
 
 // MARK: - Display Logic -
 
 // PRESENTER -> VIEW
 extension LoginErrorViewController: LoginErrorPresenterOutput {
+    func display(_ displayModel: LoginError.DisplayData.LoginError) {
+        displayToast(with: displayModel.message)
+    }
+    
     func display(_ displayModel: LoginError.DisplayData.ValidationError) {
         if let error = displayModel.emailError {
             highlight(emailField, label: emailErrorLabel, text: error)

@@ -1,0 +1,11 @@
+framework module Rye {
+  umbrella header "Rye.h"
+
+  export *
+  module * { export * }
+}
+
+module Rye.Swift {
+    header "Rye-Swift.h"
+    requires objc
+}

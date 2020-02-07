@@ -36,6 +36,8 @@
 		A83EDBF423EDA25600EF6CE1 /* ViewErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EDBED23EDA25600EF6CE1 /* ViewErrorViewController.swift */; };
 		A83EDBF523EDA25600EF6CE1 /* ViewErrorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EDBEE23EDA25600EF6CE1 /* ViewErrorProtocols.swift */; };
 		A83EDBF623EDA25700EF6CE1 /* ViewErrorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EDBEF23EDA25600EF6CE1 /* ViewErrorInteractor.swift */; };
+		A83EDBF923EDAFC300EF6CE1 /* Rye.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83EDBF823EDAFC300EF6CE1 /* Rye.framework */; };
+		A83EDBFA23EDAFC300EF6CE1 /* Rye.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A83EDBF823EDAFC300EF6CE1 /* Rye.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,20 @@
 			remoteInfo = ErrorHandling;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A83EDBFB23EDAFC300EF6CE1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A83EDBFA23EDAFC300EF6CE1 /* Rye.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8308FEE8227B2AB9005C8168 /* ErrorHandling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErrorHandling.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +107,7 @@
 		A83EDBED23EDA25600EF6CE1 /* ViewErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErrorViewController.swift; sourceTree = "<group>"; };
 		A83EDBEE23EDA25600EF6CE1 /* ViewErrorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErrorProtocols.swift; sourceTree = "<group>"; };
 		A83EDBEF23EDA25600EF6CE1 /* ViewErrorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErrorInteractor.swift; sourceTree = "<group>"; };
+		A83EDBF823EDAFC300EF6CE1 /* Rye.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rye.framework; path = Carthage/Build/iOS/Rye.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A83EDBF923EDAFC300EF6CE1 /* Rye.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +143,7 @@
 				8308FEFF227B2ABB005C8168 /* ErrorHandlingTests */,
 				8308FF0A227B2ABB005C8168 /* ErrorHandlingUITests */,
 				8308FEE9227B2AB9005C8168 /* Products */,
+				A83EDBF723EDAFC300EF6CE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,6 +250,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A83EDBF723EDAFC300EF6CE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A83EDBF823EDAFC300EF6CE1 /* Rye.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,6 +268,8 @@
 				8308FEE4227B2AB9005C8168 /* Sources */,
 				8308FEE5227B2AB9005C8168 /* Frameworks */,
 				8308FEE6227B2AB9005C8168 /* Resources */,
+				A83EDBFB23EDAFC300EF6CE1 /* Embed Frameworks */,
+				A83EDBFC23EDAFE600EF6CE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -358,6 +387,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A83EDBFC23EDAFE600EF6CE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Rye.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8308FEE4227B2AB9005C8168 /* Sources */ = {
@@ -553,6 +603,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ErrorHandling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,6 +624,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ErrorHandling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

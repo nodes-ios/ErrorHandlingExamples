@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3F-nj-we0">
-                                <rect key="frame" x="40" y="142" width="295" height="206"/>
+                                <rect key="frame" x="40" y="122" width="295" height="206"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IB4-pm-oY2">
                                         <rect key="frame" x="40" y="40" width="215" height="40"/>
@@ -27,7 +25,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="IUK-xD-Xxw"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -37,7 +34,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Eld-rR-ggF"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -69,17 +65,15 @@
                                     <constraint firstItem="Ppw-kG-Eub" firstAttribute="leading" secondItem="N3F-nj-we0" secondAttribute="leading" constant="40" id="us9-1t-3U9"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fK-Gj-rIx">
-                                <rect key="frame" x="146" y="449" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fK-Gj-rIx">
+                                <rect key="frame" x="146.5" y="449" width="82" height="30"/>
                                 <state key="normal" title="Create User"/>
                                 <connections>
                                     <action selector="createPressed:" destination="F2H-rH-Lsj" eventType="touchUpInside" id="FB9-bh-0nb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwN-Ps-DAS">
-                                <rect key="frame" x="145" y="496" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwN-Ps-DAS">
+                                <rect key="frame" x="145.5" y="496" width="84" height="30"/>
                                 <state key="normal" title="Invalid email">
                                     <color key="titleColor" red="1" green="0.2821919118871189" blue="0.22713229587260386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -87,14 +81,20 @@
                                     <action selector="emailPressed:" destination="F2H-rH-Lsj" eventType="touchUpInside" id="uNY-PE-ZBq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1o-Iv-5XC">
-                                <rect key="frame" x="130" y="534" width="114" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1o-Iv-5XC">
+                                <rect key="frame" x="130.5" y="534" width="114" height="30"/>
                                 <state key="normal" title="Invalid Password">
                                     <color key="titleColor" red="1" green="0.28219191189999998" blue="0.2271322959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="passwordPressed:" destination="F2H-rH-Lsj" eventType="touchUpInside" id="BPR-br-7wP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCp-bP-AU5">
+                                <rect key="frame" x="168.5" y="361" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="F2H-rH-Lsj" eventType="touchUpInside" id="pl5-nT-Ocq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,6 +103,14 @@
                             <constraint firstItem="N3F-nj-we0" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" constant="40" id="0vK-Tq-UNe"/>
                             <constraint firstItem="N3F-nj-we0" firstAttribute="top" secondItem="Fhz-5B-qaF" secondAttribute="top" constant="122" id="4nm-1a-gG9"/>
                             <constraint firstItem="Fhz-5B-qaF" firstAttribute="trailing" secondItem="N3F-nj-we0" secondAttribute="trailing" constant="40" id="7Sr-Se-DCR"/>
+                            <constraint firstItem="fCp-bP-AU5" firstAttribute="top" secondItem="N3F-nj-we0" secondAttribute="bottom" constant="33" id="MPn-Rq-gHI"/>
+                            <constraint firstItem="fCp-bP-AU5" firstAttribute="centerX" secondItem="N3F-nj-we0" secondAttribute="centerX" id="UhW-dz-Wqn"/>
+                            <constraint firstItem="K1o-Iv-5XC" firstAttribute="centerX" secondItem="Fhz-5B-qaF" secondAttribute="centerX" id="fP0-Ru-3UO"/>
+                            <constraint firstItem="Fhz-5B-qaF" firstAttribute="bottom" secondItem="K1o-Iv-5XC" secondAttribute="bottom" constant="103" id="hs6-3r-Bz3"/>
+                            <constraint firstItem="gwN-Ps-DAS" firstAttribute="centerX" secondItem="8fK-Gj-rIx" secondAttribute="centerX" id="l4W-2s-J3p"/>
+                            <constraint firstItem="gwN-Ps-DAS" firstAttribute="top" secondItem="8fK-Gj-rIx" secondAttribute="bottom" constant="17" id="rj6-fv-5mX"/>
+                            <constraint firstItem="K1o-Iv-5XC" firstAttribute="centerX" secondItem="gwN-Ps-DAS" secondAttribute="centerX" id="ryk-US-ngm"/>
+                            <constraint firstItem="K1o-Iv-5XC" firstAttribute="top" secondItem="gwN-Ps-DAS" secondAttribute="bottom" constant="8" id="xaR-um-WnE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fhz-5B-qaF"/>
                     </view>
