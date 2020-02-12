@@ -38,6 +38,9 @@ class ViewErrorCoordinator: Coordinator {
 // PRESENTER -> COORDINATOR
 extension ViewErrorCoordinator: ViewErrorCoordinatorInput {
     func navigate(to route: ViewError.Route) {
-        
+        switch route {
+        case .goToLogin:
+            self.navigationController.tabBarController?.selectedIndex = 1
+        }
     }
 }
