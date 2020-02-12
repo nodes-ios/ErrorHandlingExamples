@@ -32,6 +32,8 @@ extension ViewErrorPresenter: ViewErrorPresenterInput {
         switch action {
         case .doLoad:
             interactor.perform(ViewError.Request.LoadStuff())
+        case .tokenExpired:
+            coordinator?.navigate(to: .goToLogin)
         }
     }
 }

@@ -14,11 +14,11 @@ enum ViewError {
     enum DisplayData { }
 
     enum Action {
-        case doLoad
+        case doLoad, tokenExpired
     }
 
     enum Route {
-
+        case goToLogin
     }
 }
 

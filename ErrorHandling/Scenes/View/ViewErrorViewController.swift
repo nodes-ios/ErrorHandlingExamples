@@ -60,6 +60,7 @@ class ViewErrorViewController: UIViewController {
     // MARK: - Callbacks -
     @IBAction func tryAginButtonTapped(_ sender: Any) {
         doLoad()
+        showTokenExpiredAlert()
     }
     
     // MARK: - Helpers -
@@ -75,6 +76,16 @@ class ViewErrorViewController: UIViewController {
         self.activityIndicator.isHidden = true
         self.errorInfoLabel.isHidden = false
         self.tryAgainButton.isHidden = false
+    }
+
+    private func showTokenExpiredAlert() {
+        let alertController = UIAlertController(title: "Token Expired", message: "Login Again", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .default) { (_) in
+            self.presenter.handle(.tokenExpired)
+        }
+
+        alertController.addAction(alertAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }
